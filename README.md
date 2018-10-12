@@ -4,7 +4,10 @@
 
  Angular 5.2.4 Edacy application built from scratch, using the angular-cli. 
 
-This app manages cohorte. Using the app, the user can list, add, edit and remove cohorte.
+This app manages Edacy. Using the app, the user can 
+- list, add, edit and remove cohorte.
+- list, add, edit and remove cours.
+- Contact Edacy
 
 ### Prerequisites
 
