@@ -14,16 +14,16 @@
       <tbody>
         <tr *ngFor="let edacy of edacys">       
           <td>{{ edacy.cohorte }}</td>
-          <td>{{ edacy.date | date: 'EE, MMM dd' }}</td>       
+          <td>{{ edacy.date | date: 'dd/MM/yyyy' }}</td>       
           <td>{{ edacy.description }}</td>
           <td class="text-center">
             <input type="checkbox" [checked]="edacy.etat" [disabled]="true">
           </td>
           <td class="text-center">
-            <button class="btn btn-info" (click)="showEditForm(edacy)">
+            <button class="btn btn-info" style="background-color: deepskyblue" (click)="showEditForm(edacy)">
               <i class="fas fa-pencil-alt"></i>
             </button>
-            <button class="btn btn-danger" (click)="removeedacy(edacy)">
+            <button class="btn btn-danger" (click)="removeEdacy(edacy)">
               <i class="fas fa-trash-alt"></i>
             </button>
           </td>       
@@ -33,7 +33,7 @@
     <button class="btn btn-success" (click)="showNewForm()">
       <i class="fas fa-plus"></i>
     </button>
-    <form *ngIf="showForm()" [formGroup]="formGroup" (ngSubmit)="saveedacy(formGroup.value)">
+    <form *ngIf="showForm()" [formGroup]="formGroup" (ngSubmit)="saveEdacy(formGroup.value)">
       <h2>{{headerText}}</h2>
       <p>Cohorte <input type="text" name="cohorte" formControlName="cohorte" /></p>
       <p>date entrée <input type="date" name="date" formControlName="date"/></p>
@@ -43,7 +43,7 @@
       </p>
       <p>
         <input type="submit" class="btn btn-primary" value="Save">
-        <input type="button" class="btn btn-warning" value="Cancel" (click)="cancelEditEdacy()">
+        <input type="button" class="btn btn-default" style="background-color: gray" value="Cancel" (click)="cancelEditEdacy()">
       </p>
     </form>
   </div>

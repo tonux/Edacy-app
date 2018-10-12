@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { Edacy } from './edacy';
 import { EDACY_ITEMS } from '../../api/edacy-data';
-import { faSignOutAlt } from '@fortawesome/fontawesome-free-solid';
 
 @Injectable()
 export class EdacyService {

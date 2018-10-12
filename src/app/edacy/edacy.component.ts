@@ -53,6 +53,7 @@ export class EdacyComponent implements OnInit {
 
   removeEdacy(edacy: Edacy) {
     this._edacyService.deleteEdacy(edacy);
+    alert('Item supprimé');
   }
 
   cancelEditEdacy() {
@@ -65,13 +66,13 @@ export class EdacyComponent implements OnInit {
       return;
     }
     this.saveMode = SaveMode.Edit;
-    this.headerText = 'Edit cohorte';
+    this.headerText = 'Modifier cohorte';
     const editedEdacy = Object.assign({}, edacy, { date: this.applyLocale(edacy.date) });
     this.formGroup.setValue(editedEdacy);
   }
 
   showNewForm() {
-    console.log('new cohorte');
+    console.log('nouveau cohorte');
     this.formGroup.reset();
     this.saveMode = SaveMode.New;
     this.headerText = 'Nouveau cohorte';

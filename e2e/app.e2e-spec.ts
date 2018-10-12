@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('classe-edacy-app App', () => {
+describe('edacy-app App', () => {
   let page: AppPage;
 
   beforeEach(() => {

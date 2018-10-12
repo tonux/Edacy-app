@@ -5,7 +5,7 @@ export const EDACY_ITEMS: Edacy[] = [
    id: 1,
    cohorte: 'cohorte 1',
    description: 'Mettre une description',
-   date: new Date(new Date().setDate(new Date().getDate() + 4)),
+   date: new Date(new Date().setDate(new Date().getDate() + -15)),
    etat: false
  }, {
    id: 2,
