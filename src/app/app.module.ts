@@ -9,7 +9,7 @@ import { EdacyService } from './edacy/edacy.service';
 import { FontsService } from '../fonts/fonts.service';
 import { CoursComponent } from './cours/cours.component';
 
-import { appRoutes } from './routerConfig';
+import { appRoutes } from './router';
 import { ContactComponent } from './contact/contact.component';
 
 
