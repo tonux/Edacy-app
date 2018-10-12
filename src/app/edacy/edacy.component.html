@@ -1,0 +1,50 @@
+<div class="container">  
+  <div class="col-md-12">
+    <h1>Mes cohortes</h1>
+    <table class="table table-bordered table-striped table-hover">
+      <thead>
+        <tr>
+          <th class="text-center">Cohorte</th>
+          <th class="text-center">Date entrée</th>       
+          <th class="text-center">Description</th>       
+          <th class="text-center">Etat</th>       
+          <th class="text-center"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let edacy of edacys">       
+          <td>{{ edacy.cohorte }}</td>
+          <td>{{ edacy.date | date: 'EE, MMM dd' }}</td>       
+          <td>{{ edacy.description }}</td>
+          <td class="text-center">
+            <input type="checkbox" [checked]="edacy.etat" [disabled]="true">
+          </td>
+          <td class="text-center">
+            <button class="btn btn-info" (click)="showEditForm(edacy)">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="btn btn-danger" (click)="removeedacy(edacy)">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>       
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-success" (click)="showNewForm()">
+      <i class="fas fa-plus"></i>
+    </button>
+    <form *ngIf="showForm()" [formGroup]="formGroup" (ngSubmit)="saveedacy(formGroup.value)">
+      <h2>{{headerText}}</h2>
+      <p>Cohorte <input type="text" name="cohorte" formControlName="cohorte" /></p>
+      <p>date entrée <input type="date" name="date" formControlName="date"/></p>
+      <p>etat <input type="checkbox" name="etat" formControlName="etat" /></p>    
+      <p>
+        Description <textarea rows="4" cols="50" name="description" formControlName="description" ></textarea>
+      </p>
+      <p>
+        <input type="submit" class="btn btn-primary" value="Save">
+        <input type="button" class="btn btn-warning" value="Cancel" (click)="cancelEditEdacy()">
+      </p>
+    </form>
+  </div>
+ </div>
