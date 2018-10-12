@@ -11,10 +11,9 @@ This app manages cohorte. Using the app, the user can list, add, edit and remove
  - [node](https://nodejs.org/en/download/) version 8.9.4 or higher.
  - [Get VS Code](https://code.visualstudio.com/download).
  - [yarn](https://yarnpkg.com/lang/en/docs/install/) version 1.3.2 or higher.
- - [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0-rc.0 --not a big fan of RCs.
+ - [Angular CLI](https://github.com/angular/angular-cli)
 
 ### Building the app from scratch
-
 
 
 ### Quick start
